@@ -1,0 +1,329 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+/* 
+	Reset CSS 
+*/
+
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: 300;
+}
+
+/*
+	Main Page Formatting
+*/
+
+html {
+	min-width: 600px;
+}
+
+/*
+	Navigation Bar
+*/
+
+.navi-bar,
+.menu-items {
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	background: rgba(236, 236, 236, 0.6);
+}
+
+.menu-items {
+	text-align: center;
+}
+
+.menu-items > li {
+	float: left;
+	padding: 0 10px;
+	list-style-type: none;
+}
+
+/*
+	Big Header Background Image
+*/
+
+.bigHeaderContainer {
+	width: 100%;
+	height: 100%;
+	background: url("../assets/landingBackground.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	border-bottom: 2px solid black;
+
+	display: flex;
+	align-items: center;
+	justify-content: middle;
+}
+
+#main-intro {
+	padding-left: 20%;
+	align-self: center;
+	font-weight: 300;
+}
+
+/*
+	Jumping Tables Section
+*/
+
+/*.jumpTables {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: middle;
+
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+	-webkit-align-items: center;
+	-webkit-justify-content: middle;
+}*/
+
+
+/*
+	About Section Formatting
+*/
+
+#aboutSection {
+	background: #ECECEC;
+}
+
+#main-info {
+	margin-left: 40%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-right: 10%;
+	color: black;
+	line-height: 150%;
+}
+
+#pictureContainer {
+	width: 40%;
+	float: left;
+}
+
+#picture {
+	border-radius: 50%;
+	width: 50%;
+	height: 25%;
+	margin-left: 20%;
+}
+
+/*Education Section*/
+
+#educationSection {
+	background: #363636;
+}
+
+#educationSection,
+#education-list,
+#education-list > .eduContainer {
+	width: 100%;
+	color: #ECECEC;
+}
+
+#education-list {
+	list-style-type: none;
+}
+
+#education-list > .educationListItems {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.eduContainer > .left {
+	width: 40%;
+	float: left;
+}
+
+.location {
+	font-style: italic;
+	font-size: 80%;
+}
+
+#uiuc-book {
+	width: 200px;
+	height: 200px;
+	margin-right: 20%;
+	float: right;
+	display: none;
+}
+
+.eduContainer > .right {
+	width: 60%;
+	margin-left: 40%;
+}
+
+.school {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.eduDescription {
+	font-style: italic;
+}
+
+.right > div {
+	margin: 5px 0 5px 0;
+}
+
+.relevantCourseWork {
+	list-style-type: none;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+.relevantCourseWork > li {
+	margin: 2.5px 0 2.5px 0;
+}
+
+/*Projects Section*/
+
+#projectsSection,
+.projectsList,
+.projectsList > li {
+	width: 100%;
+	background: #ECECEC;
+	line-height: 130%;
+}
+
+
+.projContainer {
+	display: inline-block;
+}
+
+.projContainer > .left {
+	width: 60%;
+	float: left;
+	padding-left: 5%;
+	padding-left: 5%;
+}
+
+.projContainer > .right {
+	width: 30%;
+	margin-left: 70%;
+}
+
+.projectsList {
+	list-style-type: none;
+}
+
+.left > .header {
+	font-weight: 300;
+	font-size: 28px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.left > .responsibilityList {
+	margin-left: 30px;
+	margin-top: 15px;
+}
+
+.responsibilityList > li {
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+
+.projectDescription {
+	width: 90%;
+	height: 90%;
+	margin-top: 5%;
+	padding: 10px;
+	background: #ECECEC;
+	border: 1px solid grey;
+	box-shadow: 0px 1px 1px black;
+}
+
+/*
+*	Animation
+*	Ease in
+*/
+
+.easeIn {
+	animation-name: easeIn;
+	-webkit-animation-name: easeIn;
+
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes easeIn {
+	0% {
+		opacity: 0;
+	}
+	35% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes easeIn {
+	0% {
+		opacity: 0;
+	}
+	35% {
+		opacity: .5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/*
+	Animations: Slide Left To Right;
+*/
+
+.slideLeftToRight {
+	animation-name: slideLeftToRight;
+	-webkit-animation-name: slideLeftToRight;
+
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes slideLeftToRight {
+	0% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes slideLeftToRight {
+	0% {
+		-webkit-transform: translateX(-10%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateX(0%);
+		opacity: 1;
+	}
+}

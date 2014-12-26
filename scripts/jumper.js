@@ -1,5 +1,6 @@
 present = new Array();
 present[0] = 1;
+present[1] = 1;
 window.cacheMenuDistance = new Array();
 window.currentLocation = "Header";
 
@@ -39,6 +40,12 @@ function setupParallaxForHeader(offsets) {
 			present[0] = 0;
 		}
 
+		if (scrollLength + $(window).height() - $(window).height()/5 >= offsets[4] && present[1]) {
+			$(".contactHeader").addClass("slideLeftToRight");
+			$(".contactHeader").css("display", "initial");
+			present[1] = 0;
+		}
+
 		if (scrollLength <= offsets[1] - 150.0 && window.currentLocation != "Header") {
 			movingPanel.animate({
 				"margin-left": window.cacheMenuDistance[0].offset,
@@ -73,8 +80,8 @@ function setupParallaxForHeader(offsets) {
 
 		if (scrollLength >= offsets[4] - 150.0 && window.currentLocation != "contact") {
 			movingPanel.animate({
-				"margin-left": window.cacheMenuDistance[1].offset,
-				"width": window.cacheMenuDistance[1].length
+				"margin-left": window.cacheMenuDistance[4].offset,
+				"width": window.cacheMenuDistance[4].length
 			}, 200);
 			window.currentLocation = "contact"
 		}

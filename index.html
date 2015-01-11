@@ -2,132 +2,120 @@
 <head>
 	<title>Jeffrey Huang</title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-	<link rel="stylesheet" href="css/landing.css" \>
-	<script src="scripts/jumper.js"></script>
+	<link rel="stylesheet" href="css/style.css"></link>
+	<script src="scripts/animation.js"></script>
 </head>
 
 <body>
-
-	<div class="navi-bar">
-		<ul class="menu-items">
-			<li id="branding">jh</li>
-			<li id="about">about</li>
-			<li id="education">education</li>
-			<li id="projects">projects</li>
-			<li id="contact-me">contact me</li>
-		</ul>
-		<div class="active"></div>
+	<div class="name_heading">
+		<p id="heading">Jeffrey Huang</p>
 	</div>
-
-	<div class="bigHeaderContainer easeIn" id="brandingSection">
-		<h1 class="slideLeftToRight" id="main-intro">I am Jeffrey Huang</h1>
-	</div>
-
-	<div class="jumpTables">
-
-		<div class="infoSection" id="aboutSection">
-			<div id="pictureContainer">
-				<!-- <img src="assets/picture.jpg" id="picture" /> -->
-			</div>
-			<p id="main-info">I am a self taught programmer studying computer engineering.  Currently a sophomore, I hope to hone my skills through classwork as well as side projects and work opportunities.  I have a wide variety of experiences but with an emphasis on mobile and web development.  If you would like to talk to me further go to the contact me section, otherwise check out some of the projects I've been working on!</p>
+	<div class="col-sm-12 content-container">
+		<div class="col-sm-3 menu-items">
+			<ul>
+				<li class="menu-item" id="aboutButton">
+					<p>About Me</p>
+				</li>
+				<li class="menu-item" id="wordButton">
+					<p>Past works/Projects</p>
+				</li>
+				<li class="menu-item" id="samplesButton">
+					<p>Code Samples</p>
+				</li>
+				<li class="menu-item">
+					<p><a class="excludeFrom" href="assets/resume.pdf">Resume</a></p>
+				</li>
+			</ul>
 		</div>
-
-		<div class="infoSection" id="educationSection">
-			<div class="containerForBlur">
-			<ul id="education-list">
-				<li class="educationListItems" id="uiuc">
-					<div class="eduContainer">
-						<div class="left">
-							<img src="assets/book.svg" id="uiuc-book"></img>
+		<div class="col-sm-3"></div>
+		<div class="col-sm-9 content">
+			<ul>
+				<li class="content-item col-sm-12" id="about">
+					<p>I am a self taught programmer and software engineering.  I was born in Miami FL, and have lived there my entire life.  Currently a sophomore at the University of Illinois at Urbana Champaign (UIUC), I am studying computer engineering with goals of entering the software development industry after graduation.  </p>
+					<p>I started programming because I always thought it was really cool and interesting and fell in love with it since then.  I strive to better myself everyday through classes as well as personal projects</p>
+					<p>I am currently searching for an internship over the summer of 2015 for software development in an environment where I can learn and apply my skills in programming.</p>   
+				</li>
+				<li class="content-item col-sm-12" id="personalprojects">
+					<h2>Projects and Work</h2>
+					<div class="row">
+						<div class="personalproject-img col-sm-4">
+							
 						</div>
-						<div class="right">
-							<h1 class="school">University of Illinois at Urbana Champaign <span class="location">(Champaign, IL)</span></h1>
-							<div class="eduDescription">Bachelors of Science in Computer Engineering</div>
-							<div>Sophomore</div>
-							<ul class="relevantCourseWork">
-								<li class="cwItem">CS 101: Introduction to Computer Science</li>
-								<li class="cwItem">CS 173: Discrete Structures</li>
-								<li class="cwItem">ECE 110: Introduction to Electronics</li>
-								<li class="cwItem">ECE 120: Introduction to Computing</li>
-								<li class="cwItem">ECE 210: Analog Signals and Systems</li>
-								<li class="cwItem">ECE 220: Introduction to Computer Systems and Programming</li>
+						<div class="personaproject-description col-sm-8 vcenter">
+							<h4 class="projecttitle">Tekst (Work in Progress)</h4>
+							<p>Description:	A work in progress website that will provide college students an easy way to buy and trade textbooks with peers.</p>
+
+							<p>Skills: Ruby on Rails</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="personaproject-description col-sm-8 vcenter">
+							<h4 class="projecttitle">SafeWalks iOS App</h4>
+							<p>Description:	I wrote an app for the SafeWalks program at UIUC, a service where students can request someone to walk them back to their home.</p>
+
+							<p>Skills: Objective C, iOS Liraries</p>
+							<ul>
+								<li>Wrote the entire user interface for iOS</li>
+								<li>Used Location Data on the phone to create requests that were sent to FireBase and processed</li>
+							</ul>
+						</div>
+						<div class="personalproject-img col-sm-4">
+							<img class="pic" src="assets/projects/safewalks/screen1.png" />
+						</div>
+					</div>
+					<div class="row">
+						<div class="personalproject-img col-sm-4">
+							<img class="pic" src="assets/projects/ece110/screen1.png">
+						</div>
+						<div class="personaproject-description col-sm-8 vcenter">
+							<h4 class="projecttitle">ECE 110 Course Website</h4>
+							<p>Description:	A summer long project where I worked as a web programmer for the UIUC ECE department.  The goal was to rewrite an essential course website for first year students.  This project was significant because of the wide variety of features that were intended for the website</p>
+
+							<p>Skills: HTML, CSS, PHP, Javascript</p>
+							<ul>
+								<li>Designed the system that transcribed plain text course notes into webpages by request, this increased efficiency ten fold because previously the note conversion was done by hand</li>
+								<li>Created a system for parsing and generating interactive examples on the fly</li>
+								<li>Coded everything on the frontend to the backend from scratch</li>
 							</ul>
 						</div>
 					</div>
 				</li>
-				<li class="educationListItems" id="stoneman">
-					<div class="eduContainer">
-						<div class="left"></div>
-						<div class="right">
-							<h1 class="school">Stoneman Douglas High School <span class="location">(Parkland, FL)</span></h1>
-							<div class="eduDescription">Alumni</div>
-						</div>
+				<li class="content-item col-sm-12" id="codesamples">
+					<h2>Code Samples</h2>
+					<div class="newrow" id="ai">
+						<p>AI for a snake game, written for class.  Written in C</p>
+						<ul>
+							<li><a href="assets/samples/ai/ai.c">ai.c</a></li>
+						</ul>
+					</div>
+					<div class="newrow" id="imageconv">
+						<p>Image convolution program, applies a variety of filters such as blurs, grayscale, pixelation, sharpening, etc.  Written in C</p>
+						<ul>
+							<li><a href="assets/samples/imageconv/functions.c">functions.c</a></li>
+						</ul>
+					</div>
+					<div class="newrow" id="audio">
+						<p>Audio Processing program, can either clip and loop a small segment of a wav file or apply a lo pass filter.  Written in C</p>
+						<ul>
+							<li><a href="assets/samples/audio/audio.c">audio.c</a></li>
+						</ul>
+					</div>
+					<div class="newrow" id="javascript">
+						<p>Javascript code for parsing an XML file for specific tags specified in the script.  This was written for the ECE department of UIUC for their ECE 110 website.  Converts properly tagged xml into an interactive example</p>
+						<ul>
+							<li><a href="https://github.com/seadraa/ECE110-XMLParser/blob/master/stepByStep.js" target="_blank">Github</a></li>
+						</ul>
+					</div>
+					<div class="newrow" id="github">
+						<img src="assets/github.png" id="githubpic"/><a class="excludeFrom" href="https://github.com/seadraa">Github</a>
 					</div>
 				</li>
 			</ul>
 		</div>
-		</div>
-		<div class="infoSection" id="projectsSection">
-			<ul class="projectsList">
-				<li class="projectListItem">
-					<div class="projContainer">
-						<div class="left">
-							<h1 class="header">ECE 110 Website</h1>
-							<p class="projDescription">Worked as an intern for the ECE Department at UIUC and was responsible for rewriting an essential course website for first year students</p>
-							<ul class="responsibilityList">
-								<li class="respListItem">Rebuilt the system from the ground up using frontend and backend technologies including HTML 5, CSS3, Javascript, and PHP</li>
-								<li class="respListItem">Wrote a script in PHP that converted course notes from plain text to HTML and increased projectivity tenfold</li>
-								<li class="respListItem">Wrote a script in JS that converted step-by-step examples from xml to HTML</li>
-								<li class="respListItem">Worked on all of the code that exists on the website</li>
-								<li class="respListItem">Currently deployed and is being visited 12,000 times a semester</li>
-							</ul>
-						</div>
-						<div class="right">
-							<img src="assets/projects/ece110Web.jpg" class="projectDescription" />
-						</div>
-					</div>
-				</li>
-				<li class="projectListItem">
-					<div class="projContainer">
-						<div class="left">
-							<h1 class="header">SafeWalks Application</h1>
-							<p class="projDescription">Writing the iOS frontend for the SafeWalks program at UIUC.  The purpose of the app is to send the location of students that want to be picked up and walked home and meant for students that are new to campus or extremely intoxicated.</p>
-							<ul class="responsibilityList">
-								<li class="respListItem">Used Firebase as a database to temporarily hold requests</li>
-								<li class="respListItem">Worked in a small team to ensure a consistant user interface over all devices</li>
-								<li class="respListItem">Coded the iOS version completely.</li>
-							</ul>
-						</div>
-						<div class="right"></div>
-					</div>
-				</li>
-				<li class="projectListItem">
-					<div class="projContainer">
-						<div class="left"></div>
-						<div class="right"></div>
-					</div>
-				</li>
-			</ul>
-		</div>
-
-		<div class="infoSection" id="contact-meSection">
-			<div class="contactContainer">
-				<div class="left">
-					<h1 class="header contactHeader">We should stay in touch.</h1>
-				</div>
-				<div class="right">
-					<ul class="iconContainer">
-						<li class="icon"><a href="mailto:jhuang61@illinois.edu"><img src="assets/contact/email.svg" class="iconImg" /></a></li>
-						<li class="icon"><a href="http://github.com/seadraa"><img src="assets/contact/github.svg" class="iconImg" /></a></li>
-						<li class="icon"><a href="https://www.linkedin.com/pub/jeffrey-huang/89/a47/347"><img src="assets/contact/linkedin.svg" class="iconImg" /></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
 	</div>
-
 
 </body>

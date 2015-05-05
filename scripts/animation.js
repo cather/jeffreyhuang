@@ -2,6 +2,7 @@ $(document).ready(main);
 
 function main()
 {
+    $('.start_point').trigger('click');
     var boxes = $(".box");
     $(boxes).each(function() {
         var children = $(this).children();
@@ -11,8 +12,6 @@ function main()
     });
     
     var workInfo = parseWorkInformation();
-    
-
     var otherInfo = parseOtherInformation();
     
     
@@ -20,6 +19,17 @@ function main()
     $('.work-injection-point').html(workInfo);
 
 }
+
+$(document).on('click', '.menu-item', function() {
+    var data = $(this).attr('data-correlation');
+    
+    var allInfos = $(".info-section");
+    for (var i = 0; i < allInfos.length; i++)
+    {
+        if ($(allInfos[i]).attr('data-infoid') == data) $(allInfos[i]).show();
+        else $(allInfos[i]).hide();
+    }
+})
 
 function parseWorkInformation()
 {

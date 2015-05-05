@@ -60,11 +60,18 @@ html, body, p
     padding-top: 10px;
 }
 
+.all_my_info, .content-container
+{
+    margin-top: 50px;
+}
+
 .other_stuff
 {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .work-information-parsed, .other-information-parsed
 {
-    margin-top: 20px;
+    margin-top: 25px;
+}
+

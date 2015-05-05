@@ -18,13 +18,13 @@
             </div>
             <div class="col-md-4 right">
                 <ul class="menu-items">
-                    <li class="menu-item" id="aboutButton">
+                    <li class="menu-item start_point" id="aboutButton" data-correlation="about_me">
                         <p>About Me</p>
                     </li>
-                    <li class="menu-item" id="wordButton">
+                    <li class="menu-item" id="wordButton" data-correlation="past_work">
                         <p>Past work</p>
                     </li>
-                    <li class="menu-item">
+                    <li class="menu-item" data-correlation="contact_me">
                         <p>Contact Me</p>
                     </li>
                     <li class="menu-item">
@@ -35,13 +35,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="info-section" data-infoID="about_me">
+        <div class="all_my_info col-md-6 col-md-offset-3">
+            <div class="info-section" data-infoid="about_me">
                 <p>
                     I am a second year computer engineering student at the University of Illinois at Urbana Champaign.  I like working out, programming, and generally have a good time.  I've worked and am comfortable at almost every level, system level, mobile development, and web.
                 </p>
             </div>
-            <div class="info-section" data-infoID="past_work">
+            <div class="info-section" data-infoid="past_work">
                 <div class="work-information-section">
                     <ul class="work-injection-point">
                         <li class="work-information" data-name="Quicket Solutions Inc" data-title="Part Time Software Engineer" data-start="Feb 2015" data-end="Current" data-png="quicket.png">
@@ -69,10 +69,13 @@
                         <li class="other-information" data-name="Memory Lane" data-title="Vandy Hacks ~ Digital Reasoning Sponsor Award" data-done="Mar 2015" data-png='vandyhacks.png' data-partners="Thomas Reese, Joseph Milla">
                             - Created a tool to help people learn languages effortlessly through machine learning and scraping popular websites for sentences.
                         </li>
+                        <li class="other-information" data-name="Safe Walks" data-title="Safe Walks iOS Application" data-done="Feb 2015" data-png='safewalks.png' data-partners="Michael Hao">
+                            - Created an iOS application for the UIUC police department that makes it easier for students to send SafeWalk requests.
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="info-section" data-infoID="contact_me">
+            <div class="info-section" data-infoid="contact_me">
             </div>
         </div>
     </div>

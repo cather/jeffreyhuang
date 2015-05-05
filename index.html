@@ -11,111 +11,78 @@
 </head>
 
 <body>
-	<div class="name_heading">
-		<p id="heading">Jeffrey Huang</p>
-	</div>
-	<div class="col-sm-12 content-container">
-		<div class="col-sm-3 menu-items">
-			<ul>
-				<li class="menu-item" id="aboutButton">
-					<p>About Me</p>
-				</li>
-				<li class="menu-item" id="wordButton">
-					<p>Past works/Projects</p>
-				</li>
-				<li class="menu-item" id="samplesButton">
-					<p>Code Samples</p>
-				</li>
-				<li class="menu-item">
-					<p><a class="excludeFrom" href="assets/resume.pdf">Resume</a></p>
-				</li>
-			</ul>
-		</div>
-		<div class="col-sm-3"></div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 box content-container">
+            <div class="name_heading col-md-8 left">
+                <p class="heading">Jeffrey Huang</p>
+            </div>
+            <div class="col-md-4 right">
+                <ul class="menu-items">
+                    <li class="menu-item" id="aboutButton">
+                        <p>About Me</p>
+                    </li>
+                    <li class="menu-item" id="wordButton">
+                        <p>Past work</p>
+                    </li>
+                    <li class="menu-item">
+                        <p>Contact Me</p>
+                    </li>
+                    <li class="menu-item">
+                        <p><a href="assets/resume.pdf">Resume</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="info-section" data-infoID="about_me">
+                <p>
+                    I am a second year computer engineering student at the University of Illinois at Urbana Champaign.  I like working out, programming, and generally have a good time.  I've worked and am comfortable at almost every level, system level, mobile development, and web.
+                </p>
+            </div>
+            <div class="info-section" data-infoID="past_work">
+                <div class="work-information-section">
+                    <ul class="work-injection-point">
+                        <li class="work-information" data-name="Quicket Solutions Inc" data-title="Part Time Software Engineer" data-start="Feb 2015" data-end="Current" data-png="quicket.png">
+                            - Wrote a front end search feature in javascript
+                            <br/>- Wrote a custom revision control system in javascript and python (client/server)
+                            <br/>- Numerous changes to the code base, generalized and rewrote multiple sections to scale
+                        </li>
+                        <li class="work-information" data-name="University of Illinois at Urbana Champaign" data-title="Lab Assistant and Grader" data-start="Jan 2015" data-end="Current" data-png="illinois.png"></li>
+                        <li class="work-information" data-name="University of Illinois at Urbana Champaign" data-title="Undergraduate Web Developer" data-start="May 2014" data-end="Jan 2015" data-png="illinois.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="other_stuff">
+                    <ul class="other-injection-point">
+                        <li class="other-information" data-name="Seg_Fault OS" data-title="ECE 391 MP3" data-done="May 2015" data-png='linux.png' data-partners="Adam Auten, Stefanus Hinardi, Adam Long">
+                            - Worked and created a barebones linux inspired OS over the span of a month.
+                            <br/>
+                            - Included paging, read only file system parsing, signals, user level code, RTC / Keyboard / PIT, scheduling implemented using round robin, 10 system calls, up to 4 virtual terminals.
+                            <br/>
+                            - Went further and implemented several extra credit features, Soundblaster 16 driver, mouse driver, DMA driver, signals, terminal colors, RTC virtualization, 5 additional system calls including sbrk
+                        </li>
+                        <li class="other-information" data-name="Image Based Navigation System" data-title="PURE Spring 2015 Best Poster" data-done="Apr 2015" data-png='pure.png' data-partners="Fardin Abdi, Tanishq Dubey, Dongwei Shi">
+                            - Research Project trying to see if it was possible to use a camera and image matching algorithms to guide a UAV when gps and other sensors fail
+                        </li>
+                        <li class="other-information" data-name="Memory Lane" data-title="Vandy Hacks ~ Digital Reasoning Sponsor Award" data-done="Mar 2015" data-png='vandyhacks.png' data-partners="Thomas Reese, Joseph Milla">
+                            - Created a tool to help people learn languages effortlessly through machine learning and scraping popular websites for sentences.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-section" data-infoID="contact_me">
+            </div>
+        </div>
+    </div>
+<!--
 		<div class="col-sm-9 content">
 			<ul>
 				<li class="content-item col-sm-12" id="about">
-					<p>I am a self taught programmer and software developer.  I was born in Miami FL, and have lived there my entire life.  Currently a sophomore at the University of Illinois at Urbana Champaign (UIUC), I am studying computer engineering with goals of entering the software development industry after graduation.  </p>
-					<p>I started programming because I always thought it was really cool and interesting and fell in love with it since then.  I strive to better myself everyday through classes as well as personal projects</p>
-					<p>I am currently searching for an internship over the summer of 2015 for software development in an environment where I can learn and apply my skills in programming.</p>   
+                    <p>Currently a sophomore in computer engineering.  I'm comfortable working in anything from kernel programming to web development, except front end.</p>
 				</li>
-				<li class="content-item col-sm-12" id="personalprojects">
-					<h2>Projects and Work</h2>
-					<div class="row">
-						<div class="personalproject-img col-sm-4">
-							
-						</div>
-						<div class="personaproject-description col-sm-8 vcenter">
-							<h4 class="projecttitle">Tekst (Work in Progress)</h4>
-							<p>Description:	A work in progress website that will provide college students an easy way to buy and trade textbooks with peers.</p>
-
-							<p>Skills: Ruby on Rails</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="personaproject-description col-sm-8 vcenter">
-							<h4 class="projecttitle">SafeWalks iOS App</h4>
-							<p>Description:	I wrote an app for the SafeWalks program at UIUC, a service where students can request someone to walk them back to their home.</p>
-
-							<p>Skills: Objective C, iOS Liraries</p>
-							<ul>
-								<li>Wrote the entire user interface for iOS</li>
-								<li>Used Location Data on the phone to create requests that were sent to FireBase and processed</li>
-							</ul>
-						</div>
-						<div class="personalproject-img col-sm-4">
-							<img class="pic" src="assets/projects/safewalks/screen1.png" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="personalproject-img col-sm-4">
-							<img class="pic" src="assets/projects/ece110/screen1.png">
-						</div>
-						<div class="personaproject-description col-sm-8 vcenter">
-							<h4 class="projecttitle">ECE 110 Course Website</h4>
-							<p>Description:	A summer long project where I worked as a web programmer for the UIUC ECE department.  The goal was to rewrite an essential course website for first year students.  This project was significant because of the wide variety of features that were intended for the website</p>
-
-							<p>Skills: HTML, CSS, PHP, Javascript</p>
-							<ul>
-								<li>Designed the system that transcribed plain text course notes into webpages by request, this increased efficiency ten fold because previously the note conversion was done by hand</li>
-								<li>Created a system for parsing and generating interactive examples on the fly</li>
-								<li>Coded everything on the frontend to the backend from scratch</li>
-							</ul>
-						</div>
-					</div>
-				</li>
-				<li class="content-item col-sm-12" id="codesamples">
-					<h2>Code Samples</h2>
-					<div class="newrow" id="ai">
-						<p>AI for a snake game, written for class.  Written in C</p>
-						<ul>
-							<li><a href="assets/samples/ai/ai.c">ai.c</a></li>
-						</ul>
-					</div>
-					<div class="newrow" id="imageconv">
-						<p>Image convolution program, applies a variety of filters such as blurs, grayscale, pixelation, sharpening, etc.  Written in C</p>
-						<ul>
-							<li><a href="assets/samples/imageconv/functions.c">functions.c</a></li>
-						</ul>
-					</div>
-					<div class="newrow" id="audio">
-						<p>Audio Processing program, can either clip and loop a small segment of a wav file or apply a lo pass filter.  Written in C</p>
-						<ul>
-							<li><a href="assets/samples/audio/audio.c">audio.c</a></li>
-						</ul>
-					</div>
-					<div class="newrow" id="javascript">
-						<p>Javascript code for parsing an XML file for specific tags specified in the script.  This was written for the ECE department of UIUC for their ECE 110 website.  Converts properly tagged xml into an interactive example</p>
-						<ul>
-							<li><a href="https://github.com/seadraa/ECE110-XMLParser/blob/master/stepByStep.js" target="_blank">Github</a></li>
-						</ul>
-					</div>
-					<div class="newrow" id="github">
-						<img src="assets/github.png" id="githubpic"/><a class="excludeFrom" href="https://github.com/seadraa">Github</a>
-					</div>
-				</li>
-			</ul>
+            </ul>
 		</div>
-	</div>
-
+-->
 </body>

@@ -20,16 +20,64 @@ function main()
 
 }
 
+var current = "";
+
 $(document).on('click', '.menu-item', function() {
+    
     var data = $(this).attr('data-correlation');
     
     var allInfos = $(".info-section");
+    
+    if (current == data) return;
+    
+    if (current == "")
+    {
+        $(".info-section").each(function() {
+            if ($(this).attr('data-infoid') != data) $(this).hide();
+        });
+        current = data;
+        return;
+    }
+    
+    var currentOne;
+    
     for (var i = 0; i < allInfos.length; i++)
     {
-        if ($(allInfos[i]).attr('data-infoid') == data) $(allInfos[i]).show();
-        else $(allInfos[i]).hide();
+        if ($(allInfos[i]).attr('data-infoid') == current) currentOne = allInfos[i];
     }
-})
+    
+    var destination = "";
+    
+    for (var i = 0; i < allInfos.length; i++)
+    {
+        if ($(allInfos[i]).attr('data-infoid') == data) destination = allInfos[i];
+    }
+    
+    transition(currentOne, destination); 
+    current = $(this).attr('data-correlation');
+
+    
+});
+
+function transition(from, to)
+{
+    $(from).animate({
+        "margin-top": "-40px",
+        "opacity": "0"
+    }, function() {
+        $(to).css({
+            "margin-top": "40px",
+            "opacity": "0"});
+        $(to).animate({
+            "margin-top": "0px",
+            "opacity":"1"});
+        $(to).show();
+        $(this).hide();
+        $(this).css({
+            "margin-top": "0px",
+            "opacity": "1"
+        })});
+}
 
 function parseWorkInformation()
 {

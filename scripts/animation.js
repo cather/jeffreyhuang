@@ -28,6 +28,9 @@ $(document).on('click', '.menu-item', function() {
     
     var allInfos = $(".info-section");
     
+    setInactive(current);
+    setActive(this);
+    
     if (current == data) return;
     
     if (current == "")
@@ -58,6 +61,20 @@ $(document).on('click', '.menu-item', function() {
 
     
 });
+
+function setActive(elem)
+{
+    $(elem).css({
+        'color': 'rgb(192, 57, 43)'
+    });
+}
+
+function setInactive(elemID)
+{
+    $('.menu-item').each(function() {
+        if ($(this).attr('data-correlation') == elemID) $(this).css({ 'color': 'black' });
+    });
+}
 
 function transition(from, to)
 {

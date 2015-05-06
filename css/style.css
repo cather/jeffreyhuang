@@ -1,9 +1,12 @@
 /* Jeffrey Huang
    Paper Style for JeffreyHuang.com */
 
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
+
 html, body, p
 {
-    font-family: 'Avenir';
+   font-family: 'Nunito', sans-serif;
+   font-weight: 300;
 }
 .heading
 {
@@ -23,7 +26,8 @@ html, body, p
 
 .menu-items > li
 {
-    line-height: 90%
+    line-height: 90%;
+    cursor: pointer;
 }
 
 .work-info-png

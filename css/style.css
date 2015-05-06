@@ -1,9 +1,11 @@
 /* Jeffrey Huang
    Paper Style for JeffreyHuang.com */
 
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 html, body, p
 {
-    font-family: 'Avenir';
+    font-family: 'Montserrat';
 }
 .heading
 {

@@ -1,11 +1,11 @@
 /* Jeffrey Huang
    Paper Style for JeffreyHuang.com */
 
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
 
 html, body, p
 {
-   font-family: 'Montserrat', sans-serif;
+   font-family: 'Nunito', sans-serif;
 }
 .heading
 {

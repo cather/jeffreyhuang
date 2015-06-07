@@ -118,6 +118,7 @@ function parseWorkBlurb(info)
     var start = $(info).attr('data-start');
     var end = $(info).attr('data-end');
     var png = $(info).attr('data-png');
+    var loc = $(info).attr('data-location');
     var brag = $(info).html();
     
     var html = "<li class='work-information-parsed row'>";
@@ -125,6 +126,8 @@ function parseWorkBlurb(info)
     html    +=          "<span class='work-info-employer'>" + name + "</span>";
     html    +=          "<br/>";
     html    +=          "<span class='work-info-title'>" + title + "</span>";
+    html    +=          "<br/>";
+    html    +=          "<span class='work-info-location'>" + loc + "</span>";
     html    +=          "<br/>";
     html    +=          "<span class='work-info-time'>" + start + " ~ " + end + "</span>";
     html    +=          "<br/><br/>";

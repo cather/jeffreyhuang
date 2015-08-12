@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <title>Jeffrey Huang</title>
+    <meta name="description" content="Jeffrey Huang dot com">
+    <meta name="keywords" content="Jeffrey, Huang, Urbana, Champaign, UIUC, Software Engineering, Programming, Computer Engineering, developer, C, C++, ObjC, Python, HTML, Mobile, Development, Systems, web">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="css/style.css"></link>
+	<script src="scripts/jeffreyhuang.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62708827-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 box content-container">
+            <div class="name_heading col-md-8 left">
+                <p class="heading">Jeffrey Huang</p>
+            </div>
+            <div class="col-md-4 right">
+                <ul class="menu-items">
+                    <li class="menu-item start_point" id="aboutButton" data-correlation="about_me">
+                        <p>About Me</p>
+                    </li>
+                    <li class="menu-item" id="wordButton" data-correlation="past_work">
+                        <p>Past work</p>
+                    </li>
+                    <li class="menu-item" data-correlation="contact_me">
+                        <p>Contact Me</p>
+                    </li>
+                    <li class="menu-item">
+                        <p><a href="assets/resume.html">Resume</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="all_my_info col-md-6 col-md-offset-3">
+            <div class="info-section" data-infoid="about_me">
+                <p>
+                    I am a second year computer engineering student at the University of Illinois at Urbana Champaign.  I like working out, programming, and generally have a good time.  I've worked and am comfortable at almost every level, system level, mobile development, and web.
+                </p>
+            </div>
+            <div class="info-section" data-infoid="past_work">
+                <div class="work-information-section">
+                    <ul class="work-injection-point">
+                        <li class="work-information" data-name="VMware" data-title="MTS Intern - Development" data-start="June 2015" data-end="Current" data-location="Palo Alto, CA" data-png="vmware.png">
+                        </li>
+                        <li class="work-information" data-name="Quicket Solutions Inc" data-title="Part Time Software Engineer" data-start="Feb 2015" data-end="May 2015" data-location="Champaign, IL" data-png="quicket.png">
+                            - Wrote a front end search feature in javascript
+                            <br/>- Wrote a custom revision control system in javascript and python (client/server)
+                            <br/>- Numerous changes to the code base, generalized and rewrote multiple sections to scale
+                        </li>
+                        <li class="work-information" data-name="University of Illinois at Urbana Champaign" data-title="Lab Assistant (ECE 220 Computer systems and programming)" data-location="Champaign, IL" data-start="Jan 2015" data-end="May 2015" data-png="illinois.png"></li>
+                        <li class="work-information" data-name="University of Illinois at Urbana Champaign" data-title="Undergraduate Web Developer" data-start="May 2014" data-end="Jan 2015" data-location="Champaign, IL" data-png="illinois.png">
+                        </li>
+                    </ul>
+                </div>
+                <div class="other_stuff">
+                    <ul class="other-injection-point">
+                        <li class="other-information" data-name="Seg_Fault OS" data-title="ECE 391 MP3" data-done="May 2015" data-png='linux.png' data-partners="Adam Auten, Stefanus Hinardi, Adam Long">
+                            - Worked and created a barebones linux inspired OS over the span of a month.
+                            <br/>
+                            - Won second place in the ECE 391 OS Design Competition among 39 groups
+                            <br/>
+                            - Included paging, read only file system parsing, user level code, RTC / Keyboard / PIT, scheduling implemented using round robin, 10 system calls, up to 4 virtual terminals.
+                            <br/>
+                            - Went further and implemented several extra credit features, Soundblaster 16 driver, mouse driver, DMA driver, signals, terminal colors, RTC virtualization, 5 additional system calls including sbrk, mode 13h on the VGA, writable file system, and system uptime clock
+                        </li>
+                        <li class="other-information" data-name="Image Based Navigation System" data-title="PURE Spring 2015 Best Poster" data-done="Apr 2015" data-png='pure.png' data-partners="Fardin Abdi, Tanishq Dubey, Dongwei Shi">
+                            - Research Project trying to see if it was possible to use a camera and image matching algorithms to guide a UAV when gps and other sensors fail
+                        </li>
+                        <li class="other-information" data-name="Memory Lane" data-title="Vandy Hacks ~ Digital Reasoning Sponsor Award" data-done="Mar 2015" data-png='vandyhacks.png' data-partners="Thomas Reese, Joseph Milla">
+                            - Created a tool to help people learn languages effortlessly through machine learning and scraping popular websites for sentences.
+                        </li>
+                        <li class="other-information" data-name="Safe Walks" data-title="Safe Walks iOS Application" data-done="Feb 2015" data-png='safewalks.png' data-partners="Michael Hao">
+                            - Created an iOS application for the UIUC police department that makes it easier for students to send SafeWalk requests.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-section" data-infoid="contact_me">
+                <div style="text-align: center">
+                    <p>jhuang61 _at_ illinois.edu</p>
+                </div>
+                <div class="row">
+                    <p class="col-md-4 connect_with_me"><a href="https://github.com/seadraa">Github</a></p>
+                    <p class="col-md-4 connect_with_me"><a href="https://www.linkedin.com/pub/jeffrey-huang/89/a47/347
+">LinkedIn</a></p>
+                    <p class="col-md-4 connect_with_me"><a href="assets/resume.html">Resume</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--
+		<div class="col-sm-9 content">
+			<ul>
+				<li class="content-item col-sm-12" id="about">
+                    <p>Currently a sophomore in computer engineering.  I'm comfortable working in anything from kernel programming to web development, except front end.</p>
+				</li>
+            </ul>
+		</div>
+-->
+</body>

@@ -47,20 +47,20 @@ html, body, p
 .work-info-employer, .other-info-name
 
 {
-    font-size: 18px;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
 .work-info-title
 {
-    font-size: 15px;
+    font-size: 1.2em;
     font-weight: 400;
 }
 
 .work-info-time, .other-info-day
 
 {
-    font-size: 12px;
+    font-size: 1.1em;
 }
 
 .work-info
@@ -81,4 +81,13 @@ html, body, p
 .work-information-parsed, .other-information-parsed
 {
     margin-top: 25px;
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient( to right, 
+        rgba(0,0,0,0), 
+        rgba(0,0,0,0.20), 
+        rgba(0,0,0,0)); 
+    margin: 40px 0;
 }

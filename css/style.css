@@ -10,18 +10,17 @@ html, body, p
 }
 .heading
 {
-    font-size: 40px;
+    font-size: 3em;
     text-align: right;
     display: table-cell
     vertical-align: bottom;
     font-weight: bold;
-    color: #2c3e50
 }
 
 .menu-items
 {
     list-style-type: none;
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
 .menu-items > li

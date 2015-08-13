@@ -1,3 +1,11 @@
+/**
+ * @author Jeffrey Huang
+ * @filename jeffreyhuang.js
+ * @description Scripts for personal website
+ * @date 8/13/15
+ */
+
+
 $(document).ready(main);
 
 function main()

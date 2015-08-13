@@ -1,0 +1,85 @@
+/* Jeffrey Huang
+   Paper Style for JeffreyHuang.com */
+
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
+
+html, body, p
+{
+   font-family: 'Nunito', sans-serif;
+   font-weight: 300;
+}
+.heading
+{
+    font-size: 40px;
+    text-align: right;
+    display: table-cell
+    vertical-align: bottom;
+    font-weight: bold;
+    color: #2c3e50
+}
+
+.menu-items
+{
+    list-style-type: none;
+    font-size: 16px;
+}
+
+.menu-items > li
+{
+    line-height: 90%;
+    cursor: pointer;
+}
+
+.work-info-png
+{
+}
+
+.connect_with_me 
+{
+    text-align: center;
+}
+
+.work-injection-point, .other-injection-point
+
+{
+    list-style-type: none;
+}
+
+.work-info-employer, .other-info-name
+
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-info-title
+{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.work-info-time, .other-info-day
+
+{
+    font-size: 12px;
+}
+
+.work-info
+{
+    padding-top: 10px;
+}
+
+.all_my_info, .content-container
+{
+    margin-top: 50px;
+}
+
+.other_stuff
+{
+    margin-top: 50px;
+}
+
+.work-information-parsed, .other-information-parsed
+{
+    margin-top: 25px;
+}

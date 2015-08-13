@@ -2,6 +2,8 @@
 <head>
     <title>ECE Pulse 2015</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -17,7 +19,7 @@
                           rgba(1,53,103,0.85), 
                           rgba(1,53,103,0.85)
                         ), 
-            url('pulse.jpg');
+            url('pulseFront.JPG');
             background-size: 100%;
             background-repeat: no-repeat;
             margin-bottom: 30px;
@@ -49,13 +51,12 @@
         .box {
             padding: 10px 20px 10px 20px;
             text-align: center;
-            margin: 0 0 15px 0;
         }
 
         .box > .header {
             font-weight: bold;
             font-size: 1.5em;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-family: 'Raleway', sans-serif;
             color: #DE592B;
 
@@ -79,6 +80,10 @@
             width: 100%;
         }
 
+        .sponsors {
+            margin-bottom: 25px;
+        }
+
         .sponsorsHeader {
             font-weight: bold;
             font-size: 2em;
@@ -100,8 +105,68 @@
             color: #DE592B;
         }
 
+        .register {
+            height: 250px;
+        }
+        .registerHeader {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .preRegisterHeader {
+            text-align: center;
+            font-size: 2em;
+            font-weight:bold;
+            color: #DE592B;
+        }
+
+        .preRegisterBody {
+            margin-bottom: 25px;
+            text-align :center;
+        }
+
+        .footer {
+            height: 75px;
+            background-color: rgb(1,53,103);
+        }
+
+        .hamburguesaButton {
+            background-color: black;
+            padding: 15px;
+            color: white;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            position: fixed;
+            z-index: 9999;
+            left: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .menuDeHamburguesa {
+            background-color: black;
+            width: 200px;
+            position: fixed;
+            z-index: 9999;
+            height: 100%;
+            margin-left: -200px;
+        }
+
+        .menuDeHamburguesa > ul {
+            list-style-type: none;
+            color: white;
+        }
+
+        ul > li {
+            cursor: pointer;
+            margin: 20px 0;
+        }
+
     </style>
     <script>
+        var maxHeight = 600;
         function getNativeDimensions(img)
         {
             var theImage = new Image();
@@ -113,6 +178,45 @@
             return { width: imageWidth, height: imageHeight };
         }
 
+        function showHamburguesa()
+        {
+            $('.menuDeHamburguesa').animate({
+                'margin-left': '0px',
+            })
+            $('.hamburguesaButton').animate({
+                'left': '210px',
+            }, function() {
+                $(this).attr('data-position', 'show');
+                $(this).html("<-")
+
+            });
+        }
+
+        function hideHamburguesa()
+        {
+            $('.menuDeHamburguesa').animate({
+                'margin-left': '-200px',
+            })
+            $('.hamburguesaButton').animate({
+                'left': '10px',
+            }, function() {
+                $(this).attr('data-position', 'hide');
+                $(this).html("->")
+            });
+        }
+
+        function clickedHamburguesa()
+        {
+            if ($(this).attr('data-position') == 'show')
+            {
+                hideHamburguesa();
+            }
+            else
+            {
+                showHamburguesa();
+            }
+        }
+
         $(document).on('ready', function() {
             var img = 'pulseFront.jpg';
             var dimensions = getNativeDimensions(img);
@@ -122,9 +226,10 @@
             var windowWidth = $(window).width();
 
             dimensionalHeight = windowWidth * aspectRatio;
-            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 : dimensionalHeight - 20;
+            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 > maxHeight ? maxHeight : windowHeight - 20: dimensionalHeight - 20 > maxHeight ? maxHeight : dimensionalHeight - 20;
             $($('.landing')[0]).height(dimensionalHeight);
 
+            $('.hamburguesaButton').on('click', clickedHamburguesa);
             // var temp = $('.accent')
             // for (var idx in temp)
             // {
@@ -154,7 +259,7 @@
         });
 
         $(window).on('resize', function() {
-            var img = 'pulse.jpg';
+            var img = 'pulseFront.JPG';
             var dimensions = getNativeDimensions(img);
 
             var aspectRatio = dimensions.height/dimensions.width;
@@ -162,35 +267,43 @@
             var windowWidth = $(window).width();
 
             dimensionalHeight = windowWidth * aspectRatio;
-            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 : dimensionalHeight - 20;
+            dimensionalHeight = dimensionalHeight - 20 > windowHeight ? windowHeight - 20 > maxHeight ? maxHeight : windowHeight - 20: dimensionalHeight - 20 > maxHeight ? maxHeight : dimensionalHeight - 20;
             $($('.landing')[0]).height(dimensionalHeight);
         })
     </script>
 </head>
 
 <body>
+    <div class="hamburguesaButton">-></div>
+    <div class="menuDeHamburguesa" data-position="hide">
+        <ul>
+            <li>ECE Pulse</li>
+            <li>Sponsors</li>
+            <li>Competitions</li>
+        </ul>
+    </div>
     <div class="homepage">
         <div class="col-md-12 col-lg-12 col-sm-12 landing">
-            <span class="col-md-12 col-lg-12 col-sm-12 label">ECE PULSE 2016</span><br/>
-            <span class="col-md-12 col-lg-12 col-sm-12 caption">The heartbeat of innovation</span>
+            <span class="col-md-12 col-lg-12 col-sm-12 col-xs-12 label">ECE PULSE 2016</span><br/>
+            <span class="col-md-12 col-lg-12 col-sm-12 col-xs-12 caption">The heartbeat of innovation</span>
         </div>
     </div>
-    <div class="about_us col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 ">
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xs-12 box">
+    <div class="about_us col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12">
+        <div class="col-sm-6 col-md-6 col-lg-4 box">
             <div class="header accent">
                 One week of innovation.
             </div>
             <div class="blurb">
                 ECE Pulse is an annual student-run conference held at UIUC which showcases innovation in electrical and computer engineering technologies. The conference is comprised of design competitions, tech talks, and networking sessions for students, alumni, faculty, and corporate representatives.</div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xs-12 box">
+        <div class="col-sm-6 col-md-6 col-lg-4 box">
             <div class="header accent">
                 Infinite opportunities.
             </div>
             <div class="blurb">
                 Our aim is to inspire students by connecting them with the latest in novel technologies and projects in the corporate world, exposing them to new opportunities for ECE within industry. Engineers from leading tech companies will engage attendees in discussions regarding the latest and greatest in ECE innovation.</div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-4 box">
+        <div class="col-sm-6 col-md-6 col-lg-4 box">
             <div class="header accent">
                 Engage. Network. Innovate.
             </div>
@@ -198,7 +311,7 @@
                 We encourage attendees to challenge themselves. Step out of your comfort zone. Meet new people. Learn from the best. Build teams. Collaborate.</div>
         </div>
     </div>
-    <div class="col-lg-8 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1">
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
         <div class="divider"></div>
     </div>
 
@@ -245,11 +358,24 @@
                 <img src="http://placehold.it/300x100" class="sponsorPlaceholder">
             </div>
         </div>
-        <a href="/" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 findOutHow">Find out how to sponsor</a>
+        <a href="/" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 findOutHow">Want to sponsor?</a>
     </div>
+
     <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
         <div class="divider"></div>
     </div>
 
-    
+    <div class="col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 register">
+        <div class="preRegisterHeader col-lg-12 col-sm-12 col-md-12">Be the first to hear</div>
+        <div class="preRegisterBody col-lg-12 col-sm-12 col-md-12">We will be releasing more information about dates, registration and other exciting other stuff in the upcoming weeks, sign up to get the email when the information is released!</div>
+        <form class="pure-form col-lg-12 col-sm-12 col-md-12">
+            <fieldset>
+                <input id="email" type="email" class="col-lg-10 col-md-10 col-sm-10" placeholder="Email">
+                <button type="submit" class="pure-button col-lg-2 col-md-2 col-sm-2 pure-button-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 footer"></div>
+
 </body>
